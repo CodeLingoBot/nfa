@@ -32,7 +32,7 @@ func NewNFA(initState int, isFinal bool) *NFA {
 	return retNFA
 }
 
-//Add new state in this NFA
+//AddState adds new state in this NFA
 func (d *NFA) AddState(state int, isFinal bool) {
 	if state == -1 {
 		fmt.Println("Cannot add state as -1, it is dead state")
@@ -45,7 +45,7 @@ func (d *NFA) AddState(state int, isFinal bool) {
 	}
 }
 
-//Add new transition function into NFA
+//AddTransition adds new transition function into NFA
 func (d *NFA) AddTransition(srcState int, input string, dstStateList ...int) {
 	find := false
 
